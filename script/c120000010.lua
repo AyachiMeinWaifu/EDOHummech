@@ -1,5 +1,5 @@
 --Dragonflymech Rescuer
-Local s,id=GetID()
+local s,id=GetID()
 function s.initial_effect(c)
 	--spsummon
 	local e1=Effect.CreateEffect(c)
