@@ -194,12 +194,13 @@ end
 function s.efop2(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	local rc=c:GetReasonCard()
-
 	local e2=Effect.CreateEffect(rc)
 	e2:SetDescription(3205)
 	e2:SetType(EFFECT_TYPE_SINGLE)
 	e2:SetProperty(EFFECT_FLAG_CLIENT_HINT)
 	e2:SetCode(EFFECT_DIRECT_ATTACK)
+	e2:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
+	e2:SetRange(LOCATION_MZONE)
 	e2:SetReset(RESET_EVENT+RESETS_STANDARD)
 	c:RegisterEffect(e2,true)
 
